@@ -13,9 +13,6 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   console.log('a user connected');
-  socket.on('connected', function(socket){
-    io.emit('connected', socket);
-  });
   socket.on('login', function(userName){
     userConnected.push(userName);
     io.emit('newUser', userConnected);

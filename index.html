@@ -3,22 +3,68 @@
   <head>
     <title>Socket.IO chat</title>
     <link rel="stylesheet" href="modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     
   </head>
   <body>
     <section class="container-fluid">
       <div class="row">
-        <div class="col-md-3 user">
+        <div class="col-md-2 navUser" >
+          <div class="fija">
+            <div class="pos-f-t">
+              <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                  <h4 class="text-white">Collapsed content</h4>
+                  <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
+                <div class="bg-dark p-4">
+                  <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
+              </div>
+              <nav class="navbar navbar-dark bg-dark">
+                <span id="user"></span>
+                <button class="navbar-toggler rigth" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </nav>
+            </div>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <h3>GRUPOS</h3>
+          </div>
         </div>
-        <div class="col-md-6 messages">
-          <ul id="messages"></ul>
-          <form action="">
+        <div class="col-md-8 messages">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <table class="table">
+                <tbody id="messages">             
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <form action="" class="containerMsg">
             <input id="m" autocomplete="off" /><button class="btn btn-success">Enviar</button>
           </form> 
         </div>
-        <div class="col-md-3 userConect">
-          <ul id="listUser"></ul>
+        <div class="col-md-2 userConect">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="fija">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <h3>CONECTADOS</h3>
+              </div>
+              <table class="table">
+                <tbody id="listUser">             
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -45,6 +91,9 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="modules/jquery/dist/jquery.min.js"></script>
     <script src="modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- para la hora -->
+    <script src = "assets/moment/moment.min.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
