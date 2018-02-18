@@ -1,75 +1,68 @@
 * { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-}
-body { 
-  font: 13px Helvetica, Arial; 
+  font-family: 13px Helvetica, Arial; 
 }
 
-.user {
-  padding: 0 !important;
-}
 .searchGrupo input, .searchConnected input{
   width: 100% !important;
   margin: 3% 0 3% 3%;   
 }
 
-.messages {
-  height: 100vh;
-  background-color: #c3c7c4;
-  outline: 1px solid red;
-  padding: 0 !important;
+.containerMsg { 
+  background-color: #dadada; 
+  position: fixed; 
+  bottom: 0;
+  width: 66.5%; 
+  height: 10vh;
+  padding: 0.5em;
 }
 
-.containerMsg { 
-  margin: 0 1% 0 1%;
-  background-color: #f8f9fa; 
-  padding: 0 3% 0 3%; 
-  position: fixed; 
-  bottom: 0; 
-  width: 65%; 
-}
 .containerMsg input { 
-  border: 1px solid #000; 
-  border-radius: 10px;
-  padding: 10px; 
-  width: 90%; 
-  margin-right: .5%; 
+  border-radius: 0.5em;
+  padding: 0.5em; 
+  width: 100%; 
+  outline: none;
+  border: none;
 }
 .containerMsg button { 
-  width: 9%; 
-  background: rgb(130, 224, 255); 
+  width: 100%; 
   border: none; 
-  padding: 10px; 
+  padding: 0.5em; 
 }
 #messages { 
   list-style-type: none; 
-  margin: 0; 
-  padding: 0; 
+  padding: 0;
 }
-#messages li { 
-  padding: 5px 10px; 
+
+#messages li {
+  margin: 2em 0;
+  padding: 0.5em; 
+  border-radius: 0.5em;
 }
 #messages li:nth-child(odd) { 
-  background: #eee; 
+  background: #FEFFFE; 
 }
 
-.userConect {
-  margin: 0 !important;
-  
+.eventos {
+  padding: 1em;
 }
 
-.titular {
-  width: 100%;
-  background-color: #f8f9fa;
-  overflow: hidden; 
-}
-.chat {
-  display: inline-block;
-  float: left;
-}
 .eventos li {
   display:  inline-block; 
-  float: right; 
+}
+
+.eventos li:last-child {
+  float: right;
+}
+
+#chat {
+  height: 90vh;
+  overflow: auto;
+}
+
+#groups {
+  height: 100vh;
+}
+
+h3 {
+  font-size: 1.6em;
 }
