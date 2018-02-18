@@ -8,17 +8,23 @@ $(function () {
     return false;
   });
   socket.on('chat message', function(msg){
-    let message = `<tr>  
+    if (msg !== '') {
+      let message = `<li>
+                    <tr>  
                     <th scope="row">
                       <i class="fa fa-user"></i>
                       <span>${username}</span>
                       <p>${msg}</p>
                       <span>${moment().format('LT')}</span>
                     </th>
-                  </tr>`
+                  </tr>
+                  </li>`
     console.log(msg);
-    $('#messages').append(message);
+    $('#messages').prepend(message);
     window.scrollTo(0, document.body.scrollHeight);
+    } else {
+      alert(`Please enter a message, ${username}`)
+    }
   });
   socket.on('newUser', function(userConnected){
     console.log(userConnected);
@@ -32,7 +38,6 @@ $(function () {
                   </tr>`
       $('#listUser').append(user);
     }
-    window.scrollTo(0, document.body.scrollHeight);
   });
 
   $('#save').on('click', function() {
