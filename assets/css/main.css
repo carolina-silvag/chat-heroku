@@ -3,34 +3,32 @@
   padding: 0; 
   box-sizing: border-box; 
 }
-.row {
-  /*padding: 0 !important;*/
-  /*margin-left: 0 !important;*/
-}
-.navUser {
-  padding: 0 !important;
-}
-.fija { 
-  position: fixed;
-}
-/*.pos-f-t {
-  position: fixed;
-}*/
 body { 
   font: 13px Helvetica, Arial; 
 }
+
+.user {
+  padding: 0 !important;
+}
+.searchGrupo input, .searchConnected input{
+  width: 100% !important;
+  margin: 3% 0 3% 3%;   
+}
+
 .messages {
   height: 100vh;
   background-color: #c3c7c4;
   outline: 1px solid red;
+  padding: 0 !important;
 }
 
 .containerMsg { 
-  background-color: #c3c7c4; 
-  padding: 3px; 
+  margin: 0 1% 0 1%;
+  background-color: #f8f9fa; 
+  padding: 0 3% 0 3%; 
   position: fixed; 
   bottom: 0; 
-  width: 50%; 
+  width: 65%; 
 }
 .containerMsg input { 
   border: 1px solid #000; 
@@ -58,5 +56,20 @@ body {
 }
 
 .userConect {
-  padding-left: 0 !important;
+  margin: 0 !important;
+  
+}
+
+.titular {
+  width: 100%;
+  background-color: #f8f9fa;
+  overflow: hidden; 
+}
+.chat {
+  display: inline-block;
+  float: left;
+}
+.eventos li {
+  display:  inline-block; 
+  float: right; 
 }

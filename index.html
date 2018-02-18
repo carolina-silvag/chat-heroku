@@ -10,33 +10,61 @@
   <body>
     <section class="container-fluid">
       <div class="row">
-        <div class="col-md-2 navUser" >
-          <div class="fija">
-            <div class="pos-f-t">
-              <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                  <h4 class="text-white">Collapsed content</h4>
-                  <span class="text-muted">Toggleable via the navbar brand.</span>
+        <div class="col-md-2 user" >
+          <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+                <a class="dropdown-item" href="#">SALIR</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Tus Grupos</a>
+                <a class="dropdown-item" href="#">Crear Grupo</a>
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <span id="user"></span>
+              <button class="navbar-toggler rigth" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+            </nav>
+          </div>
+          <form class="form-inline searchGrupo">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <h3 class="text-center">GRUPOS</h3>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Todos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mis Grupos</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <table class="table">
+                    <tbody id="listGupo">             
+                    </tbody>
+                  </table>
                 </div>
-                <div class="bg-dark p-4">
-                  <span class="text-muted">Toggleable via the navbar brand.</span>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <table class="table">
+                    <tbody id="listGupo">             
+                    </tbody>
+                  </table>
                 </div>
               </div>
-              <nav class="navbar navbar-dark bg-dark">
-                <span id="user"></span>
-                <button class="navbar-toggler rigth" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </nav>
             </div>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <h3>GRUPOS</h3>
           </div>
         </div>
         <div class="col-md-8 messages">
+          <div class="titular">
+            <h2 class="chat"><i class="fa fa-paperclip"></i> Chat de Todo</h2>
+            <ul class="eventos">
+              <li><a href="#"><i class="fa fa-paperclip fa-2x"></i></a></li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <table class="table">
@@ -52,12 +80,12 @@
         <div class="col-md-2 userConect">
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div class="fija">
-                <form class="form-inline">
+              <div class="fija navConect">
+                <form class="form-inline searchConnected">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
                 </form>
-                <h3>CONECTADOS</h3>
+                <h3 class="text-center">CONECTADOS</h3>
               </div>
               <table class="table">
                 <tbody id="listUser">             
