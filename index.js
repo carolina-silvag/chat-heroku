@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var port = process.env.PORT || 3000;
 var userConnected = [];
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/modules', express.static(__dirname + '/node_modules'));
