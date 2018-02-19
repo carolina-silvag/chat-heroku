@@ -1,5 +1,6 @@
 $(function () {
-  $('#myModal').modal();
+  $('#home').hide()
+  /*$('#myModal').modal();*/
   var username = '';
   var socket = io();
   $('form').submit(function(){
@@ -41,6 +42,8 @@ $(function () {
   });
 
   $('#save').on('click', function() {
+    $('#login').hide();
+    $('#home').show();
     username = $('#userName').val();
     let user = `<div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
