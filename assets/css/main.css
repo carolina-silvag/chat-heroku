@@ -2,6 +2,13 @@
   font-family: 13px Helvetica, Arial; 
 }
 
+/*#form-avatar {
+  background-color: green;
+  border-radius: 10px;
+  height: 60vh;
+
+}*/
+
 .searchGrupo input, .searchConnected input{
   width: 100% !important;
   margin: 3% 0 3% 3%;   

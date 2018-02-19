@@ -15,13 +15,27 @@ io.on('connection', function(socket){
   console.log('a user connected');
   socket.on('login', function(userName){
     userConnected.push(userName);
-    io.emit('newUser', userConnected);
+    this.userName = userName;
+    io.emit('updateUser', userConnected);
   });
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
+  socket.on('chat message', function(param){
+    io.emit('chat message', param);
   });
   socket.on('disconnect', function(){
-    console.log('user disconnected');
+    console.log('user disconnected', this.userName);
+    var i = userConnected.indexOf(this.userName);
+    if (i >= 0) {
+      userConnected.splice(i, 1);
+    }
+    io.emit('updateUser', userConnected);
+  });
+  socket.on('logout', function(userName){
+    console.log('user logout', userName);
+    var i = userConnected.indexOf(userName);
+    if (i >= 0) {
+      userConnected.splice(i, 1);
+    }
+    io.emit('updateUser', userConnected);
   });
 });
 
